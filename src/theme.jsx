@@ -12,6 +12,7 @@ const theme = createTheme({
         MuiButton: {
             defaultProps: {
                 disableRipple: true, // Disable ripple effect for all buttons
+                disableElevation: true, // Disable shadow for all buttons
             },
             styleOverrides: {
                 contained: {

@@ -8,7 +8,7 @@ export const MuiButton = () => {
                 <Stack spacing={2} direction="row">
                     <Button variant="text"> Text </Button>
                     <Button variant="outlined"> Outlined </Button>
-                    <Button variant="contained"> Contained </Button>
+                    <Button variant="contained" disableElevation> Contained </Button>
                 </Stack>
                 <Stack spacing={2} direction="row">
                     <Button variant="contained" color="primary">Primary</Button>
