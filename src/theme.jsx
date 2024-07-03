@@ -19,7 +19,7 @@ const theme = createTheme({
                     // dropshadow: '0px 2px 0px rgba(0, 0, 0, 0.1)',
                     fontSize: '1rem',
                     borderRadius: '8px',
-                    padding: '8px 12px', // Updated padding
+                    // padding: '8px 12px', // Updated padding
                 },
                 outlined: {
                     textTransform: 'none',

@@ -3,13 +3,15 @@ import './App.css';
 import './fonts.css';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
-import { MuiTypography } from './components/MuiTypography';
+// import { MuiTypography } from './components/MuiTypography';
+import { MuiButton } from './components/MuiButton';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        <MuiTypography />
+        < MuiButton />
+        {/* <MuiTypography /> */}
         {/* <FormControl>
             <InputLabel htmlFor="my-input">Email address</InputLabel>
             <Input id="my-input" aria-describedby="my-helper-text" />
