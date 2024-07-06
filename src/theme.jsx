@@ -2,6 +2,9 @@ import { createTheme } from '@mui/material/styles';
 
 // Create a theme instance.
 const theme = createTheme({
+    shape: {
+        borderRadius: 8,
+    },
     palette: {
         type: 'light',
         primary: {

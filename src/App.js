@@ -5,11 +5,13 @@ import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
 // import { MuiTypography } from './components/MuiTypography';
 import { MuiButton } from './components/MuiButton';
+import { MuiNavbar } from './components/MuiNavbar';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
+        < MuiNavbar />
         < MuiButton />
         {/* <MuiTypography /> */}
         {/* <FormControl>
