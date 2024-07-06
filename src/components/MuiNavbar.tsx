@@ -6,7 +6,7 @@ import { MuiSearch } from './MuiSearch';
 
 export const MuiNavbar = () => {
   return (
-    <AppBar position="static">
+    <AppBar position="fixed">
       <Toolbar>
         <Stack direction='row' alignItems='center' justifyContent='space-between' width='100%'>
           <Stack direction='row' alignItems='center'>

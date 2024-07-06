@@ -6,13 +6,24 @@ import theme from './theme';
 // import { MuiTypography } from './components/MuiTypography';
 import { MuiButton } from './components/MuiButton';
 import { MuiNavbar } from './components/MuiNavbar';
+import Container from '@mui/material/Container';
+import { MuiSidenav } from './components/MuiSidenav';
+import { Stack, Box } from '@mui/material';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        < MuiNavbar />
-        < MuiButton />
+        <Stack direction="column" spacing={2}>
+          < MuiNavbar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }} />
+          <Stack direction="row" spacing={2}>
+            < MuiSidenav />
+            <Container maxWidth='sm' sx={{ padding:'64px 64px 64px 64px'}}>
+              < MuiButton />
+            </Container>
+          </Stack>
+
+        </Stack>
         {/* <MuiTypography /> */}
         {/* <FormControl>
             <InputLabel htmlFor="my-input">Email address</InputLabel>

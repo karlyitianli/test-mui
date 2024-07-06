@@ -2,14 +2,24 @@ import { createTheme } from '@mui/material/styles';
 
 // Create a theme instance.
 const theme = createTheme({
-    shape: {
-        borderRadius: 8,
-    },
     palette: {
         type: 'light',
         primary: {
             main: '#047957',
         },
+    },
+    typography: {
+        fontFamily: [
+            'Untitled Sans',
+            '-apple-system',
+            'sans-serif',
+        ].join(','),
+        overline: {
+            fontWeight: 500,
+        },
+    },
+    shape: {
+        borderRadius: 8,
     },
     components: {
         MuiButton: {
@@ -107,13 +117,6 @@ const theme = createTheme({
                 },
             },
         },
-    },
-    typography: {
-        fontFamily: [
-            'Untitled Sans',
-            '-apple-system',
-            'sans-serif',
-        ].join(','),
     },
 });
 
