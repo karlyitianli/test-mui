@@ -1,12 +1,14 @@
 import React from 'react';
-import { Drawer, List, ListItem, ListItemText, Toolbar, Typography } from '@mui/material';
+import { Drawer, List, ListItem, ListItemText, Toolbar, Typography, Divider } from '@mui/material';
 
 export const MuiSidenav = () => {
     const foundationItems = [
         { text: 'Color', path: '/color' },
         { text: 'Typography', path: '/typography' },
         { text: 'Spacing', path: '/spacing' },
-        { text: 'Layout', path: '/layout' },
+        { text: 'Radius', path: '/radius' },
+        { text: 'Shadow', path: '/shadow' },
+        { text: 'Icons', path: '/icons' },
     ];
 
     const layoutItems = [
@@ -50,7 +52,6 @@ export const MuiSidenav = () => {
         { text: 'Badge', path: '/badge' },
         { text: 'Chip', path: '/chip' },
         { text: 'Divider', path: '/divider' },
-        { text: 'Icons', path: '/icons' },
         { text: 'Material Icons', path: '/material-icons' },
         { text: 'List', path: '/list' },
         { text: 'Table', path: '/table' },
@@ -68,19 +69,23 @@ export const MuiSidenav = () => {
     ];
 
     const utilsItems = [
-        { text: 'Utils 1', path: '/utils1' },
-        { text: 'Utils 2', path: '/utils2' },
-        { text: 'Utils 3', path: '/utils3' },
-        { text: 'Utils 4', path: '/utils4' },
-        { text: 'Utils 5', path: '/utils5' },
+        { text: 'Click-Away Listener', path: '/click-away-listener' },
+        { text: 'CSS Baseline', path: '/css-baseline' },
+        { text: 'Modal', path: '/modal' },
+        { text: 'No SSR', path: '/no-ssr' },
+        { text: 'Popover', path: '/popover' },
+        { text: 'Popper', path: '/popper' },
+        { text: 'Portal', path: '/portal' },
+        { text: 'Textarea Autosize', path: '/textarea-autosize' },
+        { text: 'Transitions', path: '/transitions' },
+        { text: 'Use Media Query', path: '/use-media-query' },
     ];
 
     const muixItems = [
-        { text: 'MUI X 1', path: '/muix1' },
-        { text: 'MUI X 2', path: '/muix2' },
-        { text: 'MUI X 3', path: '/muix3' },
-        { text: 'MUI X 4', path: '/muix4' },
-        { text: 'MUI X 5', path: '/muix5' },
+        { text: 'Data Grid', path: '/data-grid' },
+        { text: 'Date & Time Pickers', path: '/date-time-pickers' },
+        { text: 'Charts', path: '/charts' },
+        { text: 'Tree View', path: '/tree-view' },
     ];
 
     return (
@@ -104,6 +109,7 @@ export const MuiSidenav = () => {
                     </ListItem>
                 ))}
             </List>
+            <Divider />
             <Typography variant="overline" component="div" sx={{ px: 2, pt: 2 }}>
                 Layout
             </Typography>
@@ -114,6 +120,7 @@ export const MuiSidenav = () => {
                     </ListItem>
                 ))}
             </List>
+            <Divider />
             <Typography variant="overline" component="div" sx={{ px: 2, pt: 2 }}>
                 Navigation
             </Typography>
@@ -124,6 +131,7 @@ export const MuiSidenav = () => {
                     </ListItem>
                 ))}
             </List>
+            <Divider />
             <Typography variant="overline" component="div" sx={{ px: 2, pt: 2 }}>
                 Inputs
             </Typography>
@@ -134,6 +142,7 @@ export const MuiSidenav = () => {
                     </ListItem>
                 ))}
             </List>
+            <Divider />
             <Typography variant="overline" component="div" sx={{ px: 2, pt: 2 }}>
                 Data
             </Typography>
@@ -144,6 +153,7 @@ export const MuiSidenav = () => {
                     </ListItem>
                 ))}
             </List>
+            <Divider />
             <Typography variant="overline" component="div" sx={{ px: 2, pt: 2 }}>
                 Feedback
             </Typography>
@@ -154,6 +164,7 @@ export const MuiSidenav = () => {
                     </ListItem>
                 ))}
             </List>
+            <Divider />
             <Typography variant="overline" component="div" sx={{ px: 2, pt: 2 }}>
                 Utils
             </Typography>
@@ -164,6 +175,7 @@ export const MuiSidenav = () => {
                     </ListItem>
                 ))}
             </List>
+            <Divider />
             <Typography variant="overline" component="div" sx={{ px: 2, pt: 2 }}>
                 MUI X
             </Typography>
