@@ -1,25 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import './fonts.css';
 import { ThemeProvider } from '@mui/material/styles';
-import theme from './theme';
-// import { MuiTypography } from './components/MuiTypography';
+import theme from './themes/lightTheme';
+import { MuiColors } from './components/MuiColors';
 import { MuiButton } from './components/MuiButton';
 import { MuiNavbar } from './components/MuiNavbar';
 import Container from '@mui/material/Container';
 import { MuiSidenav } from './components/MuiSidenav';
 import { Stack, Box } from '@mui/material';
+import { MuiTypography } from './components/MuiTypography';
 
 function App() {
+  //determines which component is active
+  const [activeComponent, setActiveComponent] = useState('');
+
   return (
+    // <BrowserRouter>
     <ThemeProvider theme={theme}>
       <div className="App">
         <Stack direction="column" spacing={2}>
           < MuiNavbar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }} />
           <Stack direction="row" spacing={2}>
-            < MuiSidenav />
-            <Container maxWidth='sm' sx={{ padding:'64px 64px 64px 64px'}}>
-              < MuiButton />
+            < MuiSidenav setActiveComponent={setActiveComponent} />
+            <Container maxWidth='sm' sx={{ padding: '64px 64px 64px 64px' }}>
+              {activeComponent === 'Color' && <MuiColors />}
+              {activeComponent === 'Typography' && <MuiTypography />}
+              {activeComponent === 'Button' && <MuiButton />}
             </Container>
           </Stack>
 
@@ -44,6 +51,7 @@ function App() {
           <TextField id="standard-basic" label="Standard" variant="standard" /> */}
       </div>
     </ThemeProvider>
+    // </BrowserRouter>
   );
 }
 

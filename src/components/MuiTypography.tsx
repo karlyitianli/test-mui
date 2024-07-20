@@ -1,9 +1,12 @@
 import React from 'react'
 import Typography from '@mui/material/Typography';
+import { Divider } from '@mui/material';
 
 export const MuiTypography = () => {
     return (
         <div>
+            <Typography variant="h4" gutterBottom>Typography</Typography>
+            <Divider />
             <Typography variant="h1">
                 H1 - 96px
             </Typography>

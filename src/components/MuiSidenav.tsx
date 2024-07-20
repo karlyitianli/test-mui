@@ -1,7 +1,12 @@
 import React from 'react';
 import { Drawer, List, ListItem, ListItemText, Toolbar, Typography, Divider } from '@mui/material';
 
-export const MuiSidenav = () => {
+// Add a prop type for setActiveComponent
+interface MuiSidenavProps {
+    setActiveComponent: (componentName: string) => void;
+}
+
+export const MuiSidenav: React.FC<MuiSidenavProps> = ({ setActiveComponent }) => {
     const foundationItems = [
         { text: 'Color', path: '/color' },
         { text: 'Typography', path: '/typography' },
@@ -55,8 +60,8 @@ export const MuiSidenav = () => {
         { text: 'Material Icons', path: '/material-icons' },
         { text: 'List', path: '/list' },
         { text: 'Table', path: '/table' },
-        { text: 'Tooltip', path: '/tooltip'},
-        { text: 'Typography', path: '/type'},
+        { text: 'Tooltip', path: '/tooltip' },
+        { text: 'Typography', path: '/type' },
     ];
 
     const feedbackItems = [
@@ -104,7 +109,8 @@ export const MuiSidenav = () => {
             </Typography>
             <List>
                 {foundationItems.map((item, index) => (
-                    <ListItem button key={index} component="a" href={item.path}>
+                    //removed these props: component="a" href={item.path} 
+                    <ListItem button key={index} onClick={() => setActiveComponent(item.text)}>
                         <ListItemText primary={item.text} />
                     </ListItem>
                 ))}
@@ -115,7 +121,7 @@ export const MuiSidenav = () => {
             </Typography>
             <List>
                 {layoutItems.map((item, index) => (
-                    <ListItem button key={index} component="a" href={item.path}>
+                    <ListItem button key={index} onClick={() => setActiveComponent(item.text)}>
                         <ListItemText primary={item.text} />
                     </ListItem>
                 ))}
@@ -126,7 +132,7 @@ export const MuiSidenav = () => {
             </Typography>
             <List>
                 {navigationItems.map((item, index) => (
-                    <ListItem button key={index} component="a" href={item.path}>
+                    <ListItem button key={index} onClick={() => setActiveComponent(item.text)}>
                         <ListItemText primary={item.text} />
                     </ListItem>
                 ))}
@@ -137,7 +143,7 @@ export const MuiSidenav = () => {
             </Typography>
             <List>
                 {inputItems.map((item, index) => (
-                    <ListItem button key={index} component="a" href={item.path}>
+                    <ListItem button key={index} onClick={() => setActiveComponent(item.text)}>
                         <ListItemText primary={item.text} />
                     </ListItem>
                 ))}
@@ -148,7 +154,7 @@ export const MuiSidenav = () => {
             </Typography>
             <List>
                 {dataItems.map((item, index) => (
-                    <ListItem button key={index} component="a" href={item.path}>
+                    <ListItem button key={index} onClick={() => setActiveComponent(item.text)}>
                         <ListItemText primary={item.text} />
                     </ListItem>
                 ))}
@@ -159,7 +165,7 @@ export const MuiSidenav = () => {
             </Typography>
             <List>
                 {feedbackItems.map((item, index) => (
-                    <ListItem button key={index} component="a" href={item.path}>
+                    <ListItem button key={index} onClick={() => setActiveComponent(item.text)}>
                         <ListItemText primary={item.text} />
                     </ListItem>
                 ))}
@@ -170,7 +176,7 @@ export const MuiSidenav = () => {
             </Typography>
             <List>
                 {utilsItems.map((item, index) => (
-                    <ListItem button key={index} component="a" href={item.path}>
+                    <ListItem button key={index} onClick={() => setActiveComponent(item.text)}>
                         <ListItemText primary={item.text} />
                     </ListItem>
                 ))}
@@ -181,7 +187,7 @@ export const MuiSidenav = () => {
             </Typography>
             <List>
                 {muixItems.map((item, index) => (
-                    <ListItem button key={index} component="a" href={item.path}>
+                    <ListItem button key={index} onClick={() => setActiveComponent(item.text)}>
                         <ListItemText primary={item.text} />
                     </ListItem>
                 ))}

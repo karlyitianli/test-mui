@@ -1,9 +1,9 @@
 import { createTheme } from '@mui/material/styles';
 
 // Create a theme instance.
-const theme = createTheme({
+const darkTheme = createTheme({
     palette: {
-        type: 'light',
+        mode: 'dark',
         primary: {
             main: '#047957',
         },
@@ -18,6 +18,7 @@ const theme = createTheme({
             fontWeight: 500,
         },
     },
+    spacing: 4,
     shape: {
         borderRadius: 8,
     },
@@ -120,4 +121,4 @@ const theme = createTheme({
     },
 });
 
-export default theme;
+export default darkTheme;

@@ -1,7 +1,6 @@
 @font-face {
     font-family: 'Untitled Sans';
-    src: url('/fonts/UntitledSans-Regular.otf') format('otf'),
-            url('/fonts/UntitledSans-Regular.woff') format('woff');
+    src: url('./fonts/UntitledSans-Regular.otf') format('otf');
     font-weight: normal;
     font-style: normal;
   }
