@@ -12,7 +12,7 @@ export const MuiSidenav: React.FC<MuiSidenavProps> = ({ setActiveComponent }) =>
         { text: 'Typography', path: '/typography' },
         { text: 'Spacing', path: '/spacing' },
         { text: 'Radius', path: '/radius' },
-        { text: 'Shadow', path: '/shadow' },
+        { text: 'Shadows', path: '/shadows' },
         { text: 'Icons', path: '/icons' },
     ];
 

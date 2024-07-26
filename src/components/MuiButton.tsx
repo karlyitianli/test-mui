@@ -1,9 +1,11 @@
 import React from 'react'
-import { Stack, Button } from '@mui/material';
+import { Stack, Button, Typography, Divider } from '@mui/material';
 
 export const MuiButton = () => {
     return (
         <div>
+            <Typography variant="h4" gutterBottom>Button</Typography>
+            <Divider />
             <Stack spacing={4}>
                 <Stack spacing={2} direction="row">
                     <Button variant="text"> Text </Button>

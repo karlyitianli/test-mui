@@ -2,14 +2,32 @@ import React, { useState } from 'react';
 import './App.css';
 import './fonts.css';
 import { ThemeProvider } from '@mui/material/styles';
-import theme from './themes/lightTheme';
+import lightTheme from './themes/lightTheme';
 import { MuiColors } from './components/MuiColors';
-import { MuiButton } from './components/MuiButton';
 import { MuiNavbar } from './components/MuiNavbar';
 import Container from '@mui/material/Container';
 import { MuiSidenav } from './components/MuiSidenav';
 import { Stack, Box } from '@mui/material';
 import { MuiTypography } from './components/MuiTypography';
+import { MuiAutocomplete } from './components/MuiAutocomplete';
+import { MuiButton } from './components/MuiButton';
+import { MuiButtonGroup } from './components/MuiButtonGroup';
+import { MuiCheckbox } from './components/MuiCheckbox';
+import { MuiFAB } from './components/MuiFAB';
+import { MuiRadioGroup } from './components/MuiRadioGroup';
+import { MuiRating } from './components/MuiRating';
+import { MuiSelect } from './components/MuiSelect';
+import { MuiSlider } from './components/MuiSlider';
+import { MuiSwitch } from './components/MuiSwitch';
+import { MuiTextField } from './components/MuiTextField';
+import { MuiToggleButton } from './components/MuiToggleButton';
+// Data display components
+import { MuiAvatar } from './components/MuiAvatar';
+import { MuiBadge } from './components/MuiBadge';
+import { MuiChip } from './components/MuiChip';
+import { MuiDivider } from './components/MuiDivider';
+import { MuiList } from './components/MuiList';
+import { MuiTable} from './components/MuiTable';
 
 function App() {
   //determines which component is active
@@ -17,7 +35,7 @@ function App() {
 
   return (
     // <BrowserRouter>
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={lightTheme}>
       <div className="App">
         <Stack direction="column" spacing={2}>
           < MuiNavbar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }} />
@@ -26,7 +44,24 @@ function App() {
             <Container maxWidth='sm' sx={{ padding: '64px 64px 64px 64px' }}>
               {activeComponent === 'Color' && <MuiColors />}
               {activeComponent === 'Typography' && <MuiTypography />}
+              {activeComponent === 'Autocomplete' && <MuiAutocomplete />}
               {activeComponent === 'Button' && <MuiButton />}
+              {activeComponent === 'Button Group' && <MuiButtonGroup />}
+              {activeComponent === 'Checkbox' && <MuiCheckbox />}
+              {activeComponent === 'Floating Action Button' && <MuiFAB />}
+              {activeComponent === 'Radio Group' && <MuiRadioGroup />}
+              {activeComponent === 'Rating' && <MuiRating />}
+              {activeComponent === 'Select' && <MuiSelect />}
+              {activeComponent === 'Slider' && <MuiSlider />}
+              {activeComponent === 'Switch' && <MuiSwitch />}
+              {activeComponent === 'Text Field' && <MuiTextField />}
+              {activeComponent === 'Toggle Button' && <MuiToggleButton />}
+              {activeComponent === 'Avatar' && <MuiAvatar />}
+              {activeComponent === 'Badge' && <MuiBadge />}
+              {activeComponent === 'Chip' && <MuiChip />}
+              {activeComponent === 'Divider' && <MuiDivider />}
+              {activeComponent === 'List' && <MuiList />}
+              {activeComponent === 'Table' && <MuiTable />}
             </Container>
           </Stack>
 
