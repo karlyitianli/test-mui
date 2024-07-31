@@ -9,6 +9,7 @@ import Container from '@mui/material/Container';
 import { MuiSidenav } from './components/MuiSidenav';
 import { Stack, Box } from '@mui/material';
 import { MuiTypography } from './components/MuiTypography';
+import { MuiPhosphorIcons } from './components/MuiPhosphorIcons';
 import { MuiAutocomplete } from './components/MuiAutocomplete';
 import { MuiButton } from './components/MuiButton';
 import { MuiButtonGroup } from './components/MuiButtonGroup';
@@ -26,8 +27,10 @@ import { MuiAvatar } from './components/MuiAvatar';
 import { MuiBadge } from './components/MuiBadge';
 import { MuiChip } from './components/MuiChip';
 import { MuiDivider } from './components/MuiDivider';
+import { MuiIcons } from './components/MuiIcons';
 import { MuiList } from './components/MuiList';
 import { MuiTable} from './components/MuiTable';
+import { MuiTooltip } from './components/MuiTooltip';
 
 function App() {
   //determines which component is active
@@ -44,6 +47,7 @@ function App() {
             <Container maxWidth='sm' sx={{ padding: '64px 64px 64px 64px' }}>
               {activeComponent === 'Color' && <MuiColors />}
               {activeComponent === 'Typography' && <MuiTypography />}
+              {activeComponent === 'Phosphor Icons' && <MuiPhosphorIcons />}
               {activeComponent === 'Autocomplete' && <MuiAutocomplete />}
               {activeComponent === 'Button' && <MuiButton />}
               {activeComponent === 'Button Group' && <MuiButtonGroup />}
@@ -60,8 +64,10 @@ function App() {
               {activeComponent === 'Badge' && <MuiBadge />}
               {activeComponent === 'Chip' && <MuiChip />}
               {activeComponent === 'Divider' && <MuiDivider />}
+              {activeComponent === 'Material Icons' && <MuiIcons />}
               {activeComponent === 'List' && <MuiList />}
               {activeComponent === 'Table' && <MuiTable />}
+              {activeComponent === 'Tooltip' && <MuiTooltip />}
             </Container>
           </Stack>
 

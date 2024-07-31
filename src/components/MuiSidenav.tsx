@@ -13,7 +13,7 @@ export const MuiSidenav: React.FC<MuiSidenavProps> = ({ setActiveComponent }) =>
         { text: 'Spacing', path: '/spacing' },
         { text: 'Radius', path: '/radius' },
         { text: 'Shadows', path: '/shadows' },
-        { text: 'Icons', path: '/icons' },
+        { text: 'Phosphor Icons', path: '/phosphor-icons' },
     ];
 
     const layoutItems = [
