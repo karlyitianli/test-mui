@@ -16,27 +16,6 @@ export const MuiSidenav: React.FC<MuiSidenavProps> = ({ setActiveComponent }) =>
         { text: 'Phosphor Icons', path: '/phosphor-icons' },
     ];
 
-    const layoutItems = [
-        { text: 'Box', path: '/box' },
-        { text: 'Container', path: '/container' },
-        { text: 'Grid', path: '/grid' },
-        { text: 'Grid v2', path: '/grid-v2' },
-        { text: 'Stack', path: '/stack' },
-        { text: 'Image List', path: '/image-list' },
-    ];
-
-    const navigationItems = [
-        { text: 'Bottom Navigation', path: '/bottom-navigation' },
-        { text: 'Breadcrumbs', path: '/breadcrumbs' },
-        { text: 'Drawer', path: '/drawer' },
-        { text: 'Link', path: '/link' },
-        { text: 'Menu', path: '/menu' },
-        { text: 'Pagination', path: '/pagination' },
-        { text: 'Speed Dial', path: '/speed-dial' },
-        { text: 'Stepper', path: '/stepper' },
-        { text: 'Tabs', path: '/tabs' },
-    ];
-
     const inputItems = [
         { text: 'Autocomplete', path: '/autocomplete' },
         { text: 'Button', path: '/button' },
@@ -71,6 +50,34 @@ export const MuiSidenav: React.FC<MuiSidenavProps> = ({ setActiveComponent }) =>
         { text: 'Progress', path: '/progress' },
         { text: 'Skeleton', path: '/skeleton' },
         { text: 'Snackbar', path: '/snackbar' },
+    ];
+
+    const surfaceItems = [
+        { text: 'Accordion', path: '/accordion' },
+        { text: 'App Bar', path: '/app-bar' },
+        { text: 'Card', path: '/card' },
+        { text: 'Paper', path: '/paper' },
+    ];
+
+    const navigationItems = [
+        { text: 'Bottom Navigation', path: '/bottom-navigation' },
+        { text: 'Breadcrumbs', path: '/breadcrumbs' },
+        { text: 'Drawer', path: '/drawer' },
+        { text: 'Link', path: '/link' },
+        { text: 'Menu', path: '/menu' },
+        { text: 'Pagination', path: '/pagination' },
+        { text: 'Speed Dial', path: '/speed-dial' },
+        { text: 'Stepper', path: '/stepper' },
+        { text: 'Tabs', path: '/tabs' },
+    ];
+
+    const layoutItems = [
+        { text: 'Box', path: '/box' },
+        { text: 'Container', path: '/container' },
+        { text: 'Grid', path: '/grid' },
+        { text: 'Grid v2', path: '/grid-v2' },
+        { text: 'Stack', path: '/stack' },
+        { text: 'Image List', path: '/image-list' },
     ];
 
     const utilsItems = [
@@ -117,10 +124,43 @@ export const MuiSidenav: React.FC<MuiSidenavProps> = ({ setActiveComponent }) =>
             </List>
             <Divider />
             <Typography variant="overline" component="div" sx={{ px: 2, pt: 2 }}>
-                Layout
+                Inputs
             </Typography>
             <List>
-                {layoutItems.map((item, index) => (
+                {inputItems.map((item, index) => (
+                    <ListItem button key={index} onClick={() => setActiveComponent(item.text)}>
+                        <ListItemText primary={item.text} />
+                    </ListItem>
+                ))}
+            </List>
+            <Divider />
+            <Typography variant="overline" component="div" sx={{ px: 2, pt: 2 }}>
+                Data Display
+            </Typography>
+            <List>
+                {dataItems.map((item, index) => (
+                    <ListItem button key={index} onClick={() => setActiveComponent(item.text)}>
+                        <ListItemText primary={item.text} />
+                    </ListItem>
+                ))}
+            </List>
+            <Divider />
+            <Typography variant="overline" component="div" sx={{ px: 2, pt: 2 }}>
+                Feedback
+            </Typography>
+            <List>
+                {feedbackItems.map((item, index) => (
+                    <ListItem button key={index} onClick={() => setActiveComponent(item.text)}>
+                        <ListItemText primary={item.text} />
+                    </ListItem>
+                ))}
+            </List>
+            <Divider />
+            <Typography variant="overline" component="div" sx={{ px: 2, pt: 2 }}>
+                Surfaces
+            </Typography>
+            <List>
+                {surfaceItems.map((item, index) => (
                     <ListItem button key={index} onClick={() => setActiveComponent(item.text)}>
                         <ListItemText primary={item.text} />
                     </ListItem>
@@ -139,32 +179,10 @@ export const MuiSidenav: React.FC<MuiSidenavProps> = ({ setActiveComponent }) =>
             </List>
             <Divider />
             <Typography variant="overline" component="div" sx={{ px: 2, pt: 2 }}>
-                Inputs
+                Layout
             </Typography>
             <List>
-                {inputItems.map((item, index) => (
-                    <ListItem button key={index} onClick={() => setActiveComponent(item.text)}>
-                        <ListItemText primary={item.text} />
-                    </ListItem>
-                ))}
-            </List>
-            <Divider />
-            <Typography variant="overline" component="div" sx={{ px: 2, pt: 2 }}>
-                Data
-            </Typography>
-            <List>
-                {dataItems.map((item, index) => (
-                    <ListItem button key={index} onClick={() => setActiveComponent(item.text)}>
-                        <ListItemText primary={item.text} />
-                    </ListItem>
-                ))}
-            </List>
-            <Divider />
-            <Typography variant="overline" component="div" sx={{ px: 2, pt: 2 }}>
-                Feedback
-            </Typography>
-            <List>
-                {feedbackItems.map((item, index) => (
+                {layoutItems.map((item, index) => (
                     <ListItem button key={index} onClick={() => setActiveComponent(item.text)}>
                         <ListItemText primary={item.text} />
                     </ListItem>

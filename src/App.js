@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import './App.css';
 import './fonts.css';
-import { ThemeProvider } from '@mui/material/styles';
 import lightTheme from './themes/lightTheme';
-import { MuiColors } from './components/MuiColors';
+import { ThemeProvider } from '@mui/material/styles';
 import { MuiNavbar } from './components/MuiNavbar';
 import Container from '@mui/material/Container';
 import { MuiSidenav } from './components/MuiSidenav';
 import { Stack, Box } from '@mui/material';
+// Foundations
+import { MuiColors } from './components/MuiColors';
 import { MuiTypography } from './components/MuiTypography';
 import { MuiPhosphorIcons } from './components/MuiPhosphorIcons';
+// Input components
 import { MuiAutocomplete } from './components/MuiAutocomplete';
 import { MuiButton } from './components/MuiButton';
 import { MuiButtonGroup } from './components/MuiButtonGroup';
@@ -31,6 +33,8 @@ import { MuiIcons } from './components/MuiIcons';
 import { MuiList } from './components/MuiList';
 import { MuiTable} from './components/MuiTable';
 import { MuiTooltip } from './components/MuiTooltip';
+//Feedback components
+import { MuiAlert } from './components/MuiAlert';
 
 function App() {
   //determines which component is active
@@ -68,6 +72,7 @@ function App() {
               {activeComponent === 'List' && <MuiList />}
               {activeComponent === 'Table' && <MuiTable />}
               {activeComponent === 'Tooltip' && <MuiTooltip />}
+              {activeComponent === 'Alert' && <MuiAlert />}
             </Container>
           </Stack>
 
