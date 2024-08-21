@@ -45,6 +45,11 @@ import { MuiAccordion } from './components/MuiAccordion';
 import { MuiAppbar } from './components/MuiAppbar';
 import { MuiCard } from './components/MuiCard';
 import { MuiPaper } from './components/MuiPaper';
+// Navigation components
+import { MuiBottomNavigation } from './components/MuiBottomNavigation';
+import { MuiBreadcrumbs } from './components/MuiBreadcrumbs';
+import { MuiDrawer } from './components/MuiDrawer';
+import { MuiLink } from './components/MuiLink';
 
 function App() {
   //determines which component is active
@@ -92,6 +97,10 @@ function App() {
               {activeComponent === 'App Bar' && <MuiAppbar />}
               {activeComponent === 'Card' && <MuiCard />}
               {activeComponent === 'Paper' && <MuiPaper />}
+              {activeComponent === 'Bottom Navigation' && <MuiBottomNavigation />}
+              {activeComponent === 'Breadcrumbs' && <MuiBreadcrumbs />}
+              {activeComponent === 'Drawer' && <MuiDrawer />}
+              {activeComponent === 'Link' && <MuiLink />}
             </Container>
           </Stack>
 

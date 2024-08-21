@@ -20,7 +20,7 @@ export const MuiPaper = () => {
                 >
                     <Paper elevation={0} />
                     <Paper variant='elevation'/>
-                    <Paper variant='outlined'/>
+                    <Paper variant='outlined'/> 
                     <Paper variant='outlined' square/>
                     <Paper elevation={3} />
                 </Box>
