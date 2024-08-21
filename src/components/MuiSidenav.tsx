@@ -112,7 +112,7 @@ export const MuiSidenav: React.FC<MuiSidenavProps> = ({ setActiveComponent }) =>
         >
             <Toolbar />
             <Typography variant="overline" component="div" sx={{ px: 2, pt: 2 }}>
-                Foundation
+                Foundation (6)
             </Typography>
             <List>
                 {foundationItems.map((item, index) => (
@@ -124,7 +124,7 @@ export const MuiSidenav: React.FC<MuiSidenavProps> = ({ setActiveComponent }) =>
             </List>
             <Divider />
             <Typography variant="overline" component="div" sx={{ px: 2, pt: 2 }}>
-                Inputs
+                Inputs (12)
             </Typography>
             <List>
                 {inputItems.map((item, index) => (
@@ -135,7 +135,7 @@ export const MuiSidenav: React.FC<MuiSidenavProps> = ({ setActiveComponent }) =>
             </List>
             <Divider />
             <Typography variant="overline" component="div" sx={{ px: 2, pt: 2 }}>
-                Data Display
+                Data Display (9)
             </Typography>
             <List>
                 {dataItems.map((item, index) => (
@@ -146,7 +146,7 @@ export const MuiSidenav: React.FC<MuiSidenavProps> = ({ setActiveComponent }) =>
             </List>
             <Divider />
             <Typography variant="overline" component="div" sx={{ px: 2, pt: 2 }}>
-                Feedback
+                Feedback (6)
             </Typography>
             <List>
                 {feedbackItems.map((item, index) => (
@@ -157,7 +157,7 @@ export const MuiSidenav: React.FC<MuiSidenavProps> = ({ setActiveComponent }) =>
             </List>
             <Divider />
             <Typography variant="overline" component="div" sx={{ px: 2, pt: 2 }}>
-                Surfaces
+                Surfaces (4)
             </Typography>
             <List>
                 {surfaceItems.map((item, index) => (
@@ -168,7 +168,7 @@ export const MuiSidenav: React.FC<MuiSidenavProps> = ({ setActiveComponent }) =>
             </List>
             <Divider />
             <Typography variant="overline" component="div" sx={{ px: 2, pt: 2 }}>
-                Navigation
+                Navigation (9)
             </Typography>
             <List>
                 {navigationItems.map((item, index) => (
@@ -179,7 +179,7 @@ export const MuiSidenav: React.FC<MuiSidenavProps> = ({ setActiveComponent }) =>
             </List>
             <Divider />
             <Typography variant="overline" component="div" sx={{ px: 2, pt: 2 }}>
-                Layout
+                Layout (6)
             </Typography>
             <List>
                 {layoutItems.map((item, index) => (
@@ -190,7 +190,7 @@ export const MuiSidenav: React.FC<MuiSidenavProps> = ({ setActiveComponent }) =>
             </List>
             <Divider />
             <Typography variant="overline" component="div" sx={{ px: 2, pt: 2 }}>
-                Utils
+                Utils (10)
             </Typography>
             <List>
                 {utilsItems.map((item, index) => (
@@ -201,7 +201,7 @@ export const MuiSidenav: React.FC<MuiSidenavProps> = ({ setActiveComponent }) =>
             </List>
             <Divider />
             <Typography variant="overline" component="div" sx={{ px: 2, pt: 2 }}>
-                MUI X
+                MUI X (4)
             </Typography>
             <List>
                 {muixItems.map((item, index) => (

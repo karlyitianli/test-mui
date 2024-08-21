@@ -33,14 +33,18 @@ import { MuiIcons } from './components/MuiIcons';
 import { MuiList } from './components/MuiList';
 import { MuiTable} from './components/MuiTable';
 import { MuiTooltip } from './components/MuiTooltip';
-//Feedback components
+// Feedback components
 import { MuiAlert } from './components/MuiAlert';
 import { MuiBackdrop } from './components/MuiBackdrop';
 import { MuiDialog } from './components/MuiDialog';
 import { MuiProgress } from './components/MuiProgress';
 import { MuiSkeleton } from './components/MuiSkeleton';
 import { MuiSnackbar } from './components/MuiSnackbar';
+// Surfaces components
 import { MuiAccordion } from './components/MuiAccordion';
+import { MuiAppbar } from './components/MuiAppbar';
+import { MuiCard } from './components/MuiCard';
+import { MuiPaper } from './components/MuiPaper';
 
 function App() {
   //determines which component is active
@@ -85,6 +89,9 @@ function App() {
               {activeComponent === 'Skeleton' && <MuiSkeleton />}
               {activeComponent === 'Snackbar' && <MuiSnackbar />}
               {activeComponent === 'Accordion' && <MuiAccordion />}
+              {activeComponent === 'App Bar' && <MuiAppbar />}
+              {activeComponent === 'Card' && <MuiCard />}
+              {activeComponent === 'Paper' && <MuiPaper />}
             </Container>
           </Stack>
 
