@@ -35,6 +35,12 @@ import { MuiTable} from './components/MuiTable';
 import { MuiTooltip } from './components/MuiTooltip';
 //Feedback components
 import { MuiAlert } from './components/MuiAlert';
+import { MuiBackdrop } from './components/MuiBackdrop';
+import { MuiDialog } from './components/MuiDialog';
+import { MuiProgress } from './components/MuiProgress';
+import { MuiSkeleton } from './components/MuiSkeleton';
+import { MuiSnackbar } from './components/MuiSnackbar';
+import { MuiAccordion } from './components/MuiAccordion';
 
 function App() {
   //determines which component is active
@@ -48,7 +54,7 @@ function App() {
           < MuiNavbar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }} />
           <Stack direction="row" spacing={2}>
             < MuiSidenav setActiveComponent={setActiveComponent} />
-            <Container maxWidth='sm' sx={{ padding: '64px 64px 64px 64px' }}>
+            <Container maxWidth='md' sx={{ padding: '64px 64px 64px 64px' }}>
               {activeComponent === 'Color' && <MuiColors />}
               {activeComponent === 'Typography' && <MuiTypography />}
               {activeComponent === 'Phosphor Icons' && <MuiPhosphorIcons />}
@@ -73,6 +79,12 @@ function App() {
               {activeComponent === 'Table' && <MuiTable />}
               {activeComponent === 'Tooltip' && <MuiTooltip />}
               {activeComponent === 'Alert' && <MuiAlert />}
+              {activeComponent === 'Backdrop' && <MuiBackdrop />}
+              {activeComponent === 'Dialog' && <MuiDialog />}
+              {activeComponent === 'Progress' && <MuiProgress />}
+              {activeComponent === 'Skeleton' && <MuiSkeleton />}
+              {activeComponent === 'Snackbar' && <MuiSnackbar />}
+              {activeComponent === 'Accordion' && <MuiAccordion />}
             </Container>
           </Stack>
 
