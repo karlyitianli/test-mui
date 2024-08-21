@@ -84,7 +84,7 @@ export const MuiSidenav: React.FC<MuiSidenavProps> = ({ setActiveComponent }) =>
         { text: 'Click-Away Listener', path: '/click-away-listener' },
         { text: 'CSS Baseline', path: '/css-baseline' },
         { text: 'Modal', path: '/modal' },
-        { text: 'No SSR', path: '/no-ssr' },
+        { text: 'No SSR', path: '/no-ssr' },    
         { text: 'Popover', path: '/popover' },
         { text: 'Popper', path: '/popper' },
         { text: 'Portal', path: '/portal' },

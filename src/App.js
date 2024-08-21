@@ -50,6 +50,12 @@ import { MuiBottomNavigation } from './components/MuiBottomNavigation';
 import { MuiBreadcrumbs } from './components/MuiBreadcrumbs';
 import { MuiDrawer } from './components/MuiDrawer';
 import { MuiLink } from './components/MuiLink';
+import { MuiMenu } from './components/MuiMenu';
+import { MuiPagination } from './components/MuiPagination';
+import { MuiSpeedDial } from './components/MuiSpeedDial';
+import { MuiStepper } from './components/MuiStepper';
+import { MuiTabs } from './components/MuiTabs';
+import { MuiBox } from './components/MuiBox';
 
 function App() {
   //determines which component is active
@@ -101,6 +107,12 @@ function App() {
               {activeComponent === 'Breadcrumbs' && <MuiBreadcrumbs />}
               {activeComponent === 'Drawer' && <MuiDrawer />}
               {activeComponent === 'Link' && <MuiLink />}
+              {activeComponent === 'Menu' && <MuiMenu />}
+              {activeComponent === 'Pagination' && <MuiPagination />}
+              {activeComponent === 'Speed Dial' && <MuiSpeedDial />}
+              {activeComponent === 'Stepper' && <MuiStepper />}
+              {activeComponent === 'Tabs' && <MuiTabs />}
+              {activeComponent === 'Box' && <MuiBox />}
             </Container>
           </Stack>
 
