@@ -60,6 +60,11 @@ import { MuiContainer } from './components/MuiContainer';
 import { MuiGrid } from './components/MuiGrid';
 import { MuiStack } from './components/MuiStack';
 import { MuiImageList} from './components/MuiImageList';
+// Utils components
+import { MuiModal } from './components/MuiModal';
+import { MuiPopover } from './components/MuiPopover'
+import { MuiPopper } from './components/MuiPopper';
+;
 
 function App() {
   //determines which component is active
@@ -121,6 +126,9 @@ function App() {
               {activeComponent === 'Grid' && <MuiGrid />}
               {activeComponent === 'Stack' && <MuiStack />}
               {activeComponent === 'Image List' && <MuiImageList />}
+              {activeComponent === 'Modal' && <MuiModal />}
+              {activeComponent === 'Popover' && <MuiPopover />}
+              {activeComponent === 'Popper' && <MuiPopper />}
             </Container>
           </Stack>
 

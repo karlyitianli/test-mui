@@ -81,16 +81,9 @@ export const MuiSidenav: React.FC<MuiSidenavProps> = ({ setActiveComponent }) =>
     ];
 
     const utilsItems = [
-        { text: 'Click-Away Listener', path: '/click-away-listener' },
-        { text: 'CSS Baseline', path: '/css-baseline' },
         { text: 'Modal', path: '/modal' },
-        { text: 'No SSR', path: '/no-ssr' },    
         { text: 'Popover', path: '/popover' },
         { text: 'Popper', path: '/popper' },
-        { text: 'Portal', path: '/portal' },
-        { text: 'Textarea Autosize', path: '/textarea-autosize' },
-        { text: 'Transitions', path: '/transitions' },
-        { text: 'Use Media Query', path: '/use-media-query' },
     ];
 
     const muixItems = [
@@ -190,7 +183,7 @@ export const MuiSidenav: React.FC<MuiSidenavProps> = ({ setActiveComponent }) =>
             </List>
             <Divider />
             <Typography variant="overline" component="div" sx={{ px: 2, pt: 2 }}>
-                Utils (10)
+                Utils (3)
             </Typography>
             <List>
                 {utilsItems.map((item, index) => (
