@@ -56,6 +56,10 @@ import { MuiSpeedDial } from './components/MuiSpeedDial';
 import { MuiStepper } from './components/MuiStepper';
 import { MuiTabs } from './components/MuiTabs';
 import { MuiBox } from './components/MuiBox';
+import { MuiContainer } from './components/MuiContainer';
+import { MuiGrid } from './components/MuiGrid';
+import { MuiStack } from './components/MuiStack';
+import { MuiImageList} from './components/MuiImageList';
 
 function App() {
   //determines which component is active
@@ -113,6 +117,10 @@ function App() {
               {activeComponent === 'Stepper' && <MuiStepper />}
               {activeComponent === 'Tabs' && <MuiTabs />}
               {activeComponent === 'Box' && <MuiBox />}
+              {activeComponent === 'Container' && <MuiContainer />}
+              {activeComponent === 'Grid' && <MuiGrid />}
+              {activeComponent === 'Stack' && <MuiStack />}
+              {activeComponent === 'Image List' && <MuiImageList />}
             </Container>
           </Stack>
 
