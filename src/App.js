@@ -31,7 +31,7 @@ import { MuiChip } from './components/MuiChip';
 import { MuiDivider } from './components/MuiDivider';
 import { MuiIcons } from './components/MuiIcons';
 import { MuiList } from './components/MuiList';
-import { MuiTable} from './components/MuiTable';
+import { MuiTable } from './components/MuiTable';
 import { MuiTooltip } from './components/MuiTooltip';
 // Feedback components
 import { MuiAlert } from './components/MuiAlert';
@@ -59,82 +59,103 @@ import { MuiBox } from './components/MuiBox';
 import { MuiContainer } from './components/MuiContainer';
 import { MuiGrid } from './components/MuiGrid';
 import { MuiStack } from './components/MuiStack';
-import { MuiImageList} from './components/MuiImageList';
+import { MuiImageList } from './components/MuiImageList';
 // Utils components
 import { MuiModal } from './components/MuiModal';
 import { MuiPopover } from './components/MuiPopover'
 import { MuiPopper } from './components/MuiPopper';
-;
+import { MuiDataGrid } from './components/MuiDataGrid';
+// Date & Time components
+import { LocalizationProvider } from '@mui/x-date-pickers';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
+// MUI X components
+import { MuiDatePicker } from './components/MuiDatePicker';
+import { MuiBarChart } from './components/MuiBarChart';
+import { MuiLineChart } from './components/MuiLineChart';
+import { MuiPieChart } from './components/MuiPieChart';
+import { MuiScatterChart } from './components/MuiScatterChart';
+import { MuiSparkline } from './components/MuiSparkline';
+import { MuiGauge } from './components/MuiGauge';
+import { MuiTreeView } from './components/MuiTreeView';
 
 function App() {
   //determines which component is active
   const [activeComponent, setActiveComponent] = useState('');
 
   return (
-    // <BrowserRouter>
-    <ThemeProvider theme={lightTheme}>
-      <div className="App">
-        <Stack direction="column" spacing={2}>
-          < MuiNavbar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }} />
-          <Stack direction="row" spacing={2}>
-            < MuiSidenav setActiveComponent={setActiveComponent} />
-            <Container maxWidth='md' sx={{ padding: '64px 64px 64px 64px' }}>
-              {activeComponent === 'Color' && <MuiColors />}
-              {activeComponent === 'Typography' && <MuiTypography />}
-              {activeComponent === 'Phosphor Icons' && <MuiPhosphorIcons />}
-              {activeComponent === 'Autocomplete' && <MuiAutocomplete />}
-              {activeComponent === 'Button' && <MuiButton />}
-              {activeComponent === 'Button Group' && <MuiButtonGroup />}
-              {activeComponent === 'Checkbox' && <MuiCheckbox />}
-              {activeComponent === 'Floating Action Button' && <MuiFAB />}
-              {activeComponent === 'Radio Group' && <MuiRadioGroup />}
-              {activeComponent === 'Rating' && <MuiRating />}
-              {activeComponent === 'Select' && <MuiSelect />}
-              {activeComponent === 'Slider' && <MuiSlider />}
-              {activeComponent === 'Switch' && <MuiSwitch />}
-              {activeComponent === 'Text Field' && <MuiTextField />}
-              {activeComponent === 'Toggle Button' && <MuiToggleButton />}
-              {activeComponent === 'Avatar' && <MuiAvatar />}
-              {activeComponent === 'Badge' && <MuiBadge />}
-              {activeComponent === 'Chip' && <MuiChip />}
-              {activeComponent === 'Divider' && <MuiDivider />}
-              {activeComponent === 'Material Icons' && <MuiIcons />}
-              {activeComponent === 'List' && <MuiList />}
-              {activeComponent === 'Table' && <MuiTable />}
-              {activeComponent === 'Tooltip' && <MuiTooltip />}
-              {activeComponent === 'Alert' && <MuiAlert />}
-              {activeComponent === 'Backdrop' && <MuiBackdrop />}
-              {activeComponent === 'Dialog' && <MuiDialog />}
-              {activeComponent === 'Progress' && <MuiProgress />}
-              {activeComponent === 'Skeleton' && <MuiSkeleton />}
-              {activeComponent === 'Snackbar' && <MuiSnackbar />}
-              {activeComponent === 'Accordion' && <MuiAccordion />}
-              {activeComponent === 'App Bar' && <MuiAppbar />}
-              {activeComponent === 'Card' && <MuiCard />}
-              {activeComponent === 'Paper' && <MuiPaper />}
-              {activeComponent === 'Bottom Navigation' && <MuiBottomNavigation />}
-              {activeComponent === 'Breadcrumbs' && <MuiBreadcrumbs />}
-              {activeComponent === 'Drawer' && <MuiDrawer />}
-              {activeComponent === 'Link' && <MuiLink />}
-              {activeComponent === 'Menu' && <MuiMenu />}
-              {activeComponent === 'Pagination' && <MuiPagination />}
-              {activeComponent === 'Speed Dial' && <MuiSpeedDial />}
-              {activeComponent === 'Stepper' && <MuiStepper />}
-              {activeComponent === 'Tabs' && <MuiTabs />}
-              {activeComponent === 'Box' && <MuiBox />}
-              {activeComponent === 'Container' && <MuiContainer />}
-              {activeComponent === 'Grid' && <MuiGrid />}
-              {activeComponent === 'Stack' && <MuiStack />}
-              {activeComponent === 'Image List' && <MuiImageList />}
-              {activeComponent === 'Modal' && <MuiModal />}
-              {activeComponent === 'Popover' && <MuiPopover />}
-              {activeComponent === 'Popper' && <MuiPopper />}
-            </Container>
-          </Stack>
+    <LocalizationProvider dateAdapter={AdapterDayjs}>
+      <ThemeProvider theme={lightTheme}>
+        <div className="App">
+          <Stack direction="column" spacing={2}>
+            < MuiNavbar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }} />
+            <Stack direction="row" spacing={2}>
+              < MuiSidenav setActiveComponent={setActiveComponent} />
+              <Container maxWidth='md' sx={{ padding: '64px 64px 64px 64px' }}>
+                {activeComponent === 'Color' && <MuiColors />}
+                {activeComponent === 'Typography' && <MuiTypography />}
+                {activeComponent === 'Phosphor Icons' && <MuiPhosphorIcons />}
+                {activeComponent === 'Autocomplete' && <MuiAutocomplete />}
+                {activeComponent === 'Button' && <MuiButton />}
+                {activeComponent === 'Button Group' && <MuiButtonGroup />}
+                {activeComponent === 'Checkbox' && <MuiCheckbox />}
+                {activeComponent === 'Floating Action Button' && <MuiFAB />}
+                {activeComponent === 'Radio Group' && <MuiRadioGroup />}
+                {activeComponent === 'Rating' && <MuiRating />}
+                {activeComponent === 'Select' && <MuiSelect />}
+                {activeComponent === 'Slider' && <MuiSlider />}
+                {activeComponent === 'Switch' && <MuiSwitch />}
+                {activeComponent === 'Text Field' && <MuiTextField />}
+                {activeComponent === 'Toggle Button' && <MuiToggleButton />}
+                {activeComponent === 'Avatar' && <MuiAvatar />}
+                {activeComponent === 'Badge' && <MuiBadge />}
+                {activeComponent === 'Chip' && <MuiChip />}
+                {activeComponent === 'Divider' && <MuiDivider />}
+                {activeComponent === 'Material Icons' && <MuiIcons />}
+                {activeComponent === 'List' && <MuiList />}
+                {activeComponent === 'Table' && <MuiTable />}
+                {activeComponent === 'Tooltip' && <MuiTooltip />}
+                {activeComponent === 'Alert' && <MuiAlert />}
+                {activeComponent === 'Backdrop' && <MuiBackdrop />}
+                {activeComponent === 'Dialog' && <MuiDialog />}
+                {activeComponent === 'Progress' && <MuiProgress />}
+                {activeComponent === 'Skeleton' && <MuiSkeleton />}
+                {activeComponent === 'Snackbar' && <MuiSnackbar />}
+                {activeComponent === 'Accordion' && <MuiAccordion />}
+                {activeComponent === 'App Bar' && <MuiAppbar />}
+                {activeComponent === 'Card' && <MuiCard />}
+                {activeComponent === 'Paper' && <MuiPaper />}
+                {activeComponent === 'Bottom Navigation' && <MuiBottomNavigation />}
+                {activeComponent === 'Breadcrumbs' && <MuiBreadcrumbs />}
+                {activeComponent === 'Drawer' && <MuiDrawer />}
+                {activeComponent === 'Link' && <MuiLink />}
+                {activeComponent === 'Menu' && <MuiMenu />}
+                {activeComponent === 'Pagination' && <MuiPagination />}
+                {activeComponent === 'Speed Dial' && <MuiSpeedDial />}
+                {activeComponent === 'Stepper' && <MuiStepper />}
+                {activeComponent === 'Tabs' && <MuiTabs />}
+                {activeComponent === 'Box' && <MuiBox />}
+                {activeComponent === 'Container' && <MuiContainer />}
+                {activeComponent === 'Grid' && <MuiGrid />}
+                {activeComponent === 'Stack' && <MuiStack />}
+                {activeComponent === 'Image List' && <MuiImageList />}
+                {activeComponent === 'Modal' && <MuiModal />}
+                {activeComponent === 'Popover' && <MuiPopover />}
+                {activeComponent === 'Popper' && <MuiPopper />}
+                {activeComponent === 'Data Grid' && <MuiDataGrid />}
+                {activeComponent === 'Date & Time Pickers' && <MuiDatePicker />}
+                {activeComponent === 'Bar Chart' && <MuiBarChart />}
+                {activeComponent === 'Line Chart' && <MuiLineChart />}
+                {activeComponent === 'Pie Chart' && <MuiPieChart />}
+                {activeComponent === 'Scatter Chart' && <MuiScatterChart />}
+                {activeComponent === 'Sparkline' && <MuiSparkline />}
+                {activeComponent === 'Gauge' && <MuiGauge />}
+                {activeComponent === 'Tree View' && <MuiTreeView />}
+              </Container>
+            </Stack>
 
-        </Stack>
-        {/* <MuiTypography /> */}
-        {/* <FormControl>
+          </Stack>
+          {/* <MuiTypography /> */}
+          {/* <FormControl>
             <InputLabel htmlFor="my-input">Email address</InputLabel>
             <Input id="my-input" aria-describedby="my-helper-text" />
           </FormControl>
@@ -151,9 +172,9 @@ function App() {
           <Button variant="contained" style={{ textTransform: 'none' }}>Contained</Button>
           <Button variant="outlined" style={{ textTransform: 'none' }}>Outlined</Button>
           <TextField id="standard-basic" label="Standard" variant="standard" /> */}
-      </div>
-    </ThemeProvider>
-    // </BrowserRouter>
+        </div>
+      </ThemeProvider>
+    </LocalizationProvider>
   );
 }
 

@@ -89,7 +89,12 @@ export const MuiSidenav: React.FC<MuiSidenavProps> = ({ setActiveComponent }) =>
     const muixItems = [
         { text: 'Data Grid', path: '/data-grid' },
         { text: 'Date & Time Pickers', path: '/date-time-pickers' },
-        { text: 'Charts', path: '/charts' },
+        { text: 'Bar Chart', path: '/bar-chart' },
+        { text: 'Line Chart', path: '/line-chart' },
+        { text: 'Pie Chart', path: '/pie-chart' },
+        { text: 'Scatter Chart', path: '/scatter-chart' },
+        { text: 'Sparkline', path: '/sparkline' },
+        { text: 'Gauge', path: '/gauge' },
         { text: 'Tree View', path: '/tree-view' },
     ];
 
@@ -194,7 +199,7 @@ export const MuiSidenav: React.FC<MuiSidenavProps> = ({ setActiveComponent }) =>
             </List>
             <Divider />
             <Typography variant="overline" component="div" sx={{ px: 2, pt: 2 }}>
-                MUI X (4)
+                MUI X (9)
             </Typography>
             <List>
                 {muixItems.map((item, index) => (
